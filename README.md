@@ -13,7 +13,7 @@ This is a Matlab package to reproduce the experiments in the paper:
 
 ## Installation Details
 
-This package is tested in Matlab R2020a and R2020b on Windows 10 with [the updated version of Glmnet](https://web.stanford.edu/~hastie/glmnet_matlab/glmnet_matlab_new.zip). A fortran compiler is required for using Glmnet in Matlab. We test the [Intel Fortran Compiler](https://software.intel.com/content/www/us/en/develop/articles/oneapi-standalone-components.html#fortran) (Version 2021.2.0) with [Visual Studio 2019](https://visualstudio.microsoft.com/). 
+This package is tested in Matlab R2020a and R2020b on Windows 10 with [the updated version of Glmnet](https://web.stanford.edu/~hastie/glmnet_matlab/glmnet_matlab_new.zip). A fortran compiler is required for using Glmnet in Matlab. We tested the [Intel Fortran Compiler](https://software.intel.com/content/www/us/en/develop/articles/oneapi-standalone-components.html#fortran) (Version 2021.2.0) with [Visual Studio 2019](https://visualstudio.microsoft.com/). 
 
 
 
