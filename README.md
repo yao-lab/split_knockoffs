@@ -1,7 +1,7 @@
 # Split Knockoffs
 
 This is a Matlab package to reproduce the experiments in the paper:
->Yang Cao, Xinwei Sun and Yuan Yao, Controlling the False Discovery Rate in Structural Sparsity: Split Knockoffs, ['arXiv:2103.16159'](https://arxiv.org/abs/2103.16159).
+>Yang Cao, Xinwei Sun and Yuan Yao, Controlling the False Discovery Rate in Structural Sparsity: Split Knockoffs, [arXiv:2103.16159](https://arxiv.org/abs/2103.16159).
 
 
 
