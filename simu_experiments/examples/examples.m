@@ -79,6 +79,8 @@ save(sprintf('%s/result/examples', pwd));
 
 %% plot for FDR
 
+mark = 'adg';
+
 for i = 1: 3
     x = expo;
     fdr = fdr_split(1, i, :);
@@ -101,7 +103,7 @@ for i = 1: 3
         plot(x, fdr_knock_plus_, '-.b')
         hold off
         
-        
+        %axis equal;
         axis([-1,3,0,1]);
         set(gca,'XTick',[-1:0.2:3]);
         set(gca,'YTick',[0:0.2:1]);
@@ -119,6 +121,7 @@ for i = 1: 3
         plot(x, fdr_plus, 'b')
         hold off
         
+        %axis equal;
         axis([-1,3,0,1]);
         set(gca,'XTick',[-1:0.2:3]);
         set(gca,'YTick',[0:0.2:1]);
@@ -128,10 +131,13 @@ for i = 1: 3
         xlabel('$\log_{10} (\nu)$');
         ylabel('FDR');
     end
-    saveas(gcf,sprintf('plot/figure_%da', 1+i),'png');
+    saveas(gcf,sprintf('plot/figure_2%s', mark(i)),'png');
 end
 
 %% plot for Power
+
+mark = 'beh';
+
 for i = 1: 3
     x = expo;
     power = power_split(1, i, :);
@@ -155,6 +161,8 @@ for i = 1: 3
         hold off
         
         
+
+        %axis equal;
         axis([-1,3,0,1]);
         set(gca,'XTick',[-1:0.2:3]);
         set(gca,'YTick',[0:0.2:1]);
@@ -170,6 +178,7 @@ for i = 1: 3
         plot(x, power_plus, 'b')
         hold off
         
+        %axis equal;
         axis([-1,3,0,1]);
         set(gca,'XTick',[-1:0.2:3]);
         set(gca,'YTick',[0:0.2:1]);
@@ -177,5 +186,5 @@ for i = 1: 3
         xlabel('$\log_{10} (\nu)$');
         ylabel('Power');
     end
-    saveas(gcf,sprintf('plot/figure_%db', 1+i),'png');
+    saveas(gcf,sprintf('plot/figure_2%s', mark(i)),'png');
 end

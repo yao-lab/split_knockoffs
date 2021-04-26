@@ -1,4 +1,4 @@
-% This script reproduces Figure 6 of the paper, comparing the performance
+% This script reproduces Figure 3 of the paper, comparing the performance
 % of Knockoff and Split Knockoff in extreme settings of feature
 % correlation.
 % The final workspace is saved to '../result/correlation.mat'.
@@ -86,7 +86,7 @@ legend('split Knockoff (c = 0)','split Knockoff (c = 0.9)', 'Knockoff (c = 0)', 
 xlabel('$\log_{10} (\nu)$');
 ylabel('FDR');
 
-saveas(gcf,'plot/figure_6a','png');
+saveas(gcf,'plot/figure_3a','png');
 
 %% plot for Power
 x = expo;
@@ -117,4 +117,4 @@ legend('split Knockoff (c = 0)','split Knockoff (c = 0.9)', 'Knockoff (c = 0)', 
 xlabel('$\log_{10} (\nu)$');
 ylabel('Power');
 
-saveas(gcf,'plot/figure_6b','png');
+saveas(gcf,'plot/figure_3b','png');

@@ -1,4 +1,4 @@
-% This script reproduces Figure 8 of the paper, comparing the performance
+% This script reproduces Figure 5 of the paper, comparing the performance
 % of Knockoff and Split Knockoff in extreme settings of sparsity level.
 % The final workspace is saved to '../result/sparsity.mat'.
 
@@ -86,69 +86,7 @@ legend('split Knockoff (k = 10)','split Knockoff (k = 100)', 'Knockoff (k = 10)'
 xlabel('$\log_{10} (\nu)$');
 ylabel('FDR');
 
-%% plot for FDR
-x = expo;
-fdr_split = fdr_glmnet(1, :);
-fdr_split = reshape(fdr_split, [num_nu, 1]);
-fdr_split_plus = fdr_glmnet(2, :);
-fdr_split_plus = reshape(fdr_split_plus, [num_nu, 1]);
-fdr_knock_ = fdr_knock(1);
-fdr_knock_plus_ = fdr_knock(2);
-fdr_knock_ = repelem(fdr_knock_, num_nu);
-fdr_knock_plus_ = repelem(fdr_knock_plus_, num_nu);
-
-fig = figure();
-hold on
-grid on
-set(fig, 'DefaultTextInterpreter', 'latex');
-plot(x, fdr_split,'r')
-plot(x, fdr_split_plus, 'b')
-plot(x, fdr_knock_,'-.r')
-plot(x, fdr_knock_plus_, '-.b')
-hold off
-
-
-axis([-1,3,0,1]);
-set(gca,'XTick',[-1:0.2:3]);
-set(gca,'YTick',[0:0.2:1]);
-line = refline(0,option.q);
-set(line, 'LineStyle', ':', 'Color', 'black');
-legend('split Knockoff (SNR = 0.25)','split Knockoff (SNR = 4)', 'Knockoff (SNR = 0.25)', 'Knockoff (SNR = 4)');
-xlabel('$\log_{10} (\nu)$');
-ylabel('FDR');
-
-saveas(gcf,'plot/figure_7a','png');
-
-%% plot for Power
-x = expo;
-power_split = power_glmnet(1, :);
-power_split = reshape(power_split, [num_nu, 1]);
-power_split_plus = power_glmnet(2, :);
-power_split_plus = reshape(power_split_plus, [num_nu, 1]);
-power_knock_ = power_knock(1);
-power_knock_plus_ = power_knock(2);
-power_knock_ = repelem(power_knock_, num_nu);
-power_knock_plus_ = repelem(power_knock_plus_, num_nu);
-
-fig = figure();
-hold on
-grid on
-set(fig, 'DefaultTextInterpreter', 'latex');
-plot(x, power_split,'r')
-plot(x, power_split_plus, 'b')
-plot(x, power_knock_,'-.r')
-plot(x, power_knock_plus_, '-.b')
-hold off
-
-
-axis([-1,3,0,1]);
-set(gca,'XTick',[-1:0.2:3]);
-set(gca,'YTick',[0:0.2:1]);
-legend('split Knockoff (SNR = 0.25)','split Knockoff (SNR = 4)', 'Knockoff (SNR = 0.25)', 'Knockoff (SNR = 4)');
-xlabel('$\log_{10} (\nu)$');
-ylabel('Power');
-
-saveas(gcf,'plot/figure_8a','png');
+saveas(gcf,'plot/figure_5a','png');
 
 %% plot for Power
 x = expo;
@@ -179,66 +117,4 @@ legend('split Knockoff (k = 10)','split Knockoff (k = 100)', 'Knockoff (k = 10)'
 xlabel('$\log_{10} (\nu)$');
 ylabel('Power');
 
-%% plot for FDR
-x = expo;
-fdr_split = fdr_glmnet(1, :);
-fdr_split = reshape(fdr_split, [num_nu, 1]);
-fdr_split_plus = fdr_glmnet(2, :);
-fdr_split_plus = reshape(fdr_split_plus, [num_nu, 1]);
-fdr_knock_ = fdr_knock(1);
-fdr_knock_plus_ = fdr_knock(2);
-fdr_knock_ = repelem(fdr_knock_, num_nu);
-fdr_knock_plus_ = repelem(fdr_knock_plus_, num_nu);
-
-fig = figure();
-hold on
-grid on
-set(fig, 'DefaultTextInterpreter', 'latex');
-plot(x, fdr_split,'r')
-plot(x, fdr_split_plus, 'b')
-plot(x, fdr_knock_,'-.r')
-plot(x, fdr_knock_plus_, '-.b')
-hold off
-
-
-axis([-1,3,0,1]);
-set(gca,'XTick',[-1:0.2:3]);
-set(gca,'YTick',[0:0.2:1]);
-line = refline(0,option.q);
-set(line, 'LineStyle', ':', 'Color', 'black');
-legend('split Knockoff (SNR = 0.25)','split Knockoff (SNR = 4)', 'Knockoff (SNR = 0.25)', 'Knockoff (SNR = 4)');
-xlabel('$\log_{10} (\nu)$');
-ylabel('FDR');
-
-saveas(gcf,'plot/figure_8a','png');
-
-%% plot for Power
-x = expo;
-power_split = power_glmnet(1, :);
-power_split = reshape(power_split, [num_nu, 1]);
-power_split_plus = power_glmnet(2, :);
-power_split_plus = reshape(power_split_plus, [num_nu, 1]);
-power_knock_ = power_knock(1);
-power_knock_plus_ = power_knock(2);
-power_knock_ = repelem(power_knock_, num_nu);
-power_knock_plus_ = repelem(power_knock_plus_, num_nu);
-
-fig = figure();
-hold on
-grid on
-set(fig, 'DefaultTextInterpreter', 'latex');
-plot(x, power_split,'r')
-plot(x, power_split_plus, 'b')
-plot(x, power_knock_,'-.r')
-plot(x, power_knock_plus_, '-.b')
-hold off
-
-
-axis([-1,3,0,1]);
-set(gca,'XTick',[-1:0.2:3]);
-set(gca,'YTick',[0:0.2:1]);
-legend('split Knockoff (SNR = 0.25)','split Knockoff (SNR = 4)', 'Knockoff (SNR = 0.25)', 'Knockoff (SNR = 4)');
-xlabel('$\log_{10} (\nu)$');
-ylabel('Power');
-
-saveas(gcf,'plot/figure_8b','png');
+saveas(gcf,'plot/figure_5b','png');

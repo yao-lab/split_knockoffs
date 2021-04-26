@@ -1,4 +1,4 @@
-% This script reproduces Figure 7 of the paper, comparing the performance
+% This script reproduces Figure 4 of the paper, comparing the performance
 % of Knockoff and Split Knockoff in extreme settings of SNR.
 % The final workspace is saved to '../result/snr.mat'.
 
@@ -86,7 +86,7 @@ legend('split Knockoff (SNR = 0.25)','split Knockoff (SNR = 4)', 'Knockoff (SNR 
 xlabel('$\log_{10} (\nu)$');
 ylabel('FDR');
 
-saveas(gcf,'plot/figure_7a','png');
+saveas(gcf,'plot/figure_4a','png');
 
 %% plot for Power
 x = expo;
@@ -117,4 +117,4 @@ legend('split Knockoff (SNR = 0.25)','split Knockoff (SNR = 4)', 'Knockoff (SNR 
 xlabel('$\log_{10} (\nu)$');
 ylabel('Power');
 
-saveas(gcf,'plot/figure_7b','png');
+saveas(gcf,'plot/figure_4b','png');

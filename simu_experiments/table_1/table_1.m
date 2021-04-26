@@ -1,6 +1,6 @@
 % This file reproduces Table 1 of the paper, comparing the performance of
 % Split Knockoff with cross validation and Knockoff under differenct
-% settings of D; and Figure 5 in Section 5.5 of the paper, showing the
+% settings of D; and Figures in Section 5.5 of the paper, showing the
 % change of cross validation loss w.r.t. nu.
 %
 % The intermediate result will be automatically saved to
@@ -90,7 +90,7 @@ save(sprintf('%s/result/table_1', pwd));
 
 %% plot for cross validation loss
 
-ind = 'abc';
+ind = 'cfi';
 
 for i = 1: 3
     mean_cv = mean(reshape(cv_list(i, :, :), [num_nu, tests]), 2);
@@ -101,9 +101,9 @@ for i = 1: 3
     set(fig, 'DefaultTextInterpreter', 'latex');
     plot(x, mean_cv);
     hold off
-
+    
     set(gca,'XTick',[-1:0.4:3]);
     xlabel('$\log_{10} (\nu)$');
     ylabel('Cross Validation Loss');
-    saveas(gcf,sprintf('plot/figure_5%s', ind(i)),'png');
+    saveas(gcf,sprintf('plot/figure_2%s', ind(i)),'png');
 end

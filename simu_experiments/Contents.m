@@ -14,9 +14,9 @@
 %
 %   param_ablation  : files in this folder reproduces the figures in
 %       Section 5.6 of the paper, with details stated below:
-%           'param_corr.m' reproduces Figure 6 of the paper.
-%           'param_snr.m' reproduces Figure 7 of the paper.
-%           'param_sparsity.m' reproduces Figure 8 of the paper.
+%           'param_corr.m' reproduces Figure 3 of the paper.
+%           'param_snr.m' reproduces Figure 4 of the paper.
+%           'param_sparsity.m' reproduces Figure 5 of the paper.
 %
 %   table_1         : 'table_1.m' in this folder reproduces Table 1 and
-%       Figure 5 in Section 5.5 of the paper.
+%       Figures in Section 5.5 of the paper.
